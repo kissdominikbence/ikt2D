@@ -2,7 +2,7 @@
 class LevelSelect {
     constructor() {
         this.levels = [
-            { name: "Level 1", unlocked: true },
+            { name: "Level 1 Just for fun :))", unlocked: true },
             { name: "Level 2", unlocked: false },
             { name: "Level 3", unlocked: false }
         ];

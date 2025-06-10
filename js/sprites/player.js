@@ -28,17 +28,44 @@ class Player {
         this.y = constrain(this.y, 0, height - this.height);
     }
 
-    display() {
-        // Draw the player
-        fill(0, 0, 255);
-        rect(this.x, this.y, this.width, this.height);
+ display() {
+        push();
+        translate(this.x + this.width/2, this.y + this.height/2);
+        if (!this.facingRight) scale(-1, 1);
         
-        // If we had a sprite:
-        // image(this.sprite, this.x, this.y, this.width, this.height);
-    }
-
-    resetPosition() {
-        this.x = width / 2; // Reset to center of the screen
-        this.y = height - this.height - 10; // Reset to bottom of the screen
+        // Draw medieval knight
+        // Helmet
+        fill(150, 150, 150);
+        ellipse(0, -15, 25, 20);
+        
+        // Visor
+        fill(100, 100, 100);
+        rect(-8, -20, 16, 8);
+        
+        // Body armor
+        fill(180, 180, 180);
+        rect(-12, -5, 24, 30);
+        
+        // Arms
+        fill(160, 160, 160);
+        ellipse(-15, 5, 12, 20);
+        ellipse(15, 5, 12, 20);
+        
+        // Sword
+        fill(200, 200, 200);
+        rect(20, -10, 3, 25);
+        fill(139, 69, 19);
+        rect(19, 15, 5, 8);
+        
+        // Legs
+        fill(100, 100, 100);
+        rect(-8, 25, 6, 20);
+        rect(2, 25, 6, 20);
+        
+        // Cape
+        fill(150, 0, 0);
+        ellipse(0, 0, 35, 40);
+        
+        pop();
     }
 }

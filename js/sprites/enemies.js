@@ -18,12 +18,36 @@ class Enemy {
     }
 
     draw() {
-        if (this.sprite) {
-            image(this.sprite, this.x, this.y);
-        } else {
-            fill(255, 0, 0);
-            rect(this.x, this.y, this.width, this.height);
-        }
+        push();
+        translate(this.x + this.width/2, this.y + this.height/2);
+        
+        // Demon body
+        fill(255, 0, 0);
+        ellipse(0, 0, this.width, this.height);
+        
+        // Horns
+        fill(50, 0, 0);
+        triangle(-10, -15, -5, -25, -15, -20);
+        triangle(10, -15, 5, -25, 15, -20);
+        
+        // Eyes
+        fill(255, 255, 0);
+        ellipse(-8, -5, 6, 8);
+        ellipse(8, -5, 6, 8);
+        
+        // Pupils
+        ellipse(-8, -5, 3, 4);
+        ellipse(8, -5, 3, 4);
+        
+        // Mouth
+        arc(0, 5, 15, 10, 0, PI);
+        
+        // Fangs
+        fill(255);
+        triangle(-5, 5, -3, 12, -7, 8);
+        triangle(5, 5, 3, 12, 7, 8);
+        
+        pop();
     }
 
     update() {

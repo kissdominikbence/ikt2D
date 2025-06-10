@@ -1,0 +1,63 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Main Menu Styles */
+#main-menu {
+    text-align: center;
+}
+
+#main-menu h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#main-menu button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Game Over Styles */
+#game-over {
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+#game-over h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#game-over p {
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #main-menu h1 {
+        font-size: 2.5rem;
+    }
+
+    #main-menu button {
+        font-size: 1.2rem;
+    }
+
+    #game-over h2 {
+        font-size: 2rem;
+    }
+
+    #game-over p {
+        font-size: 1rem;
+    }
+}
